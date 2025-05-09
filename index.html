@@ -25,6 +25,10 @@
                     <i class="fas fa-chart-line"></i>
                     <span>Tableau de bord</span>
                 </li>
+				<li class="nav-item" data-page="projects">
+					<i class="fas fa-project-diagram"></i>
+					<span>Projets</span>
+				</li>
                 <li class="nav-item" data-page="documents">
                     <i class="fas fa-file-alt"></i>
                     <span>Documents</span>
@@ -259,6 +263,177 @@
                         </div>
                     </div>
                 </div>
+
+<!-- Page Projets -->
+<div class="content-page" id="projects">
+    <h2 class="page-title">Projets</h2>
+    
+    <div class="projects-container">
+        <div class="projects-header">
+            <div class="search-filter">
+                <input type="text" placeholder="Rechercher un projet...">
+                <button class="btn-primary">
+                    <i class="fas fa-plus"></i> Nouveau projet
+                </button>
+            </div>
+            <div class="projects-filters">
+                <select>
+                    <option>Tous les statuts</option>
+                    <option>En cours</option>
+                    <option>En pause</option>
+                    <option>Terminé</option>
+                </select>
+                <select>
+                    <option>Trier par: Date (récent)</option>
+                    <option>Trier par: Date (ancien)</option>
+                    <option>Trier par: Nom (A-Z)</option>
+                    <option>Trier par: Nom (Z-A)</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="project-status active">En cours</span>
+                    <div class="project-actions">
+                        <button><i class="fas fa-ellipsis-v"></i></button>
+                    </div>
+                </div>
+                <h3>Résidence Les Alpes</h3>
+                <p class="project-description">Immeuble résidentiel de 35 logements avec commerces au rez-de-chaussée</p>
+                <div class="project-progress">
+                    <div class="progress-info">
+                        <span>Avancement</span>
+                        <span>65%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress green" style="width: 65%"></div>
+                    </div>
+                </div>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Démarrage: 15/01/2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Livraison: 30/06/2026</span>
+                    </div>
+                </div>
+                <div class="project-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Documents</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Tâches</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Événements</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="project-status active">En cours</span>
+                    <div class="project-actions">
+                        <button><i class="fas fa-ellipsis-v"></i></button>
+                    </div>
+                </div>
+                <h3>Tour Léman</h3>
+                <p class="project-description">Tour de bureaux de 18 étages avec espaces de co-working et restaurant panoramique</p>
+                <div class="project-progress">
+                    <div class="progress-info">
+                        <span>Avancement</span>
+                        <span>42%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress blue" style="width: 42%"></div>
+                    </div>
+                </div>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Démarrage: 03/03/2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Livraison: 15/09/2026</span>
+                    </div>
+                </div>
+                <div class="project-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">Documents</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Tâches</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Événements</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-header">
+                    <span class="project-status active">En cours</span>
+                    <div class="project-actions">
+                        <button><i class="fas fa-ellipsis-v"></i></button>
+                    </div>
+                </div>
+                <h3>Éco-Quartier Jura</h3>
+                <p class="project-description">Quartier écologique de 120 logements avec espaces verts, commerces et crèche</p>
+                <div class="project-progress">
+                    <div class="progress-info">
+                        <span>Avancement</span>
+                        <span>20%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress orange" style="width: 20%"></div>
+                    </div>
+                </div>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Démarrage: 10/04/2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Livraison: 30/11/2027</span>
+                    </div>
+                </div>
+                <div class="project-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Documents</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10</span>
+                        <span class="stat-label">Tâches</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Événements</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="new-project-card">
+                <div class="add-project">
+                    <i class="fas fa-plus-circle"></i>
+                    <p>Ajouter un nouveau projet</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
                 <!-- Page Documents -->
                 <div class="content-page" id="documents">
