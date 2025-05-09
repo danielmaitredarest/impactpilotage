@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImpactPilot - Solution de pilotage de projets immobiliers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Barre latérale de navigation -->
+        <nav class="sidebar">
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h1>ImpactPilot</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item active" data-page="dashboard">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Tableau de bord</span>
+                </li>
+                <li class="nav-item" data-page="documents">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Documents</span>
+                </li>
+                <li class="nav-item" data-page="emails">
+                    <i class="fas fa-envelope"></i>
+                    <span>Emails</span>
+                    <span class="badge">3</span>
+                </li>
+                <li class="nav-item" data-page="editor">
+                    <i class="fas fa-edit"></i>
+                    <span>Éditeur IA</span>
+                </li>
+                <li class="nav-item" data-page="tasks">
+                    <i class="fas fa-tasks"></i>
+                    <span>Tâches</span>
+                </li>
+                <li class="nav-item" data-page="calendar">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Calendrier</span>
+                </li>
+                <li class="nav-item" data-page="analytics">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Analyses</span>
+                </li>
+            </ul>
+            <div class="projects-section">
+                <h3>PROJETS ACTIFS</h3>
+                <ul class="projects-list">
+                    <li class="project-item" data-project="alpes">
+                        <i class="fas fa-building"></i>
+                        <span>Résidence Les Alpes</span>
+                    </li>
+                    <li class="project-item" data-project="leman">
+                        <i class="fas fa-building"></i>
+                        <span>Tour Léman</span>
+                    </li>
+                    <li class="project-item" data-project="jura">
+                        <i class="fas fa-building"></i>
+                        <span>Éco-Quartier Jura</span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Contenu principal -->
+        <main class="main-content">
+            <!-- En-tête -->
+            <header class="main-header">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Rechercher...">
+                </div>
+                <div class="user-container">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">2</span>
+                    </div>
+                    <div class="user-profile">
+                        <div class="user-avatar">DB</div>
+                        <span class="user-name">Daniel Maitre</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Pages de contenu -->
+            <div class="content-pages">
+                <!-- Page Tableau de bord -->
+                <div class="content-page active" id="dashboard">
+                    <h2 class="page-title">Tableau de bord</h2>
+                    
+                    <div class="stats-container">
+                        <div class="stat-card">
+                            <div class="stat-info">
+                                <h3>Projets actifs</h3>
+                                <div class="stat-number">3</div>
+                            </div>
+                            <div class="stat-progress">
+                                <div class="progress-bar blue" style="width: 70%"></div>
+                                <span class="progress-text">70%</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-info">
+                                <h3>Tâches en cours</h3>
+                                <div class="stat-number">12</div>
+                            </div>
+                            <div class="stat-progress">
+                                <div class="progress-bar orange" style="width: 45%"></div>
+                                <span class="progress-text">45%</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-info">
+                                <h3>Documents partagés</h3>
+                                <div class="stat-number">24</div>
+                            </div>
+                            <div class="stat-progress">
+                                <div class="progress-bar green" style="width: 85%"></div>
+                                <span class="progress-text">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-grid">
+                        <div class="dashboard-card">
+                            <h3>Activité récente</h3>
+                            <ul class="activity-list">
+                                <li>
+                                    <div class="activity-icon blue">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <h4>PV de chantier partagé</h4>
+                                        <p>Projet Tour Léman - il y a 20 minutes</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="activity-icon green">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <h4>Esquisse Terminée : Validation Plans</h4>
+                                        <p>Projet Résidence Les Alpes - il y a 2 heures</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="activity-icon purple">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <h4>Nouvel email de l'Architecte</h4>
+                                        <p>Projet Éco-Quartier Jura - il y a 3 heures</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="activity-icon orange">
+                                        <i class="fas fa-calendar-alt"></i>
+                                    </div>
+                                    <div class="activity-details">
+                                        <h4>Réunion de chantier planifiée</h4>
+                                        <p>Projet Tour Léman - il y a 4 heures</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="dashboard-card">
+                            <h3>Projets en cours</h3>
+                            <div class="projects-progress">
+                                <div class="project-progress">
+                                    <div class="project-info">
+                                        <h4>Résidence Les Alpes</h4>
+                                        <span>65%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress green" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                                <div class="project-progress">
+                                    <div class="project-info">
+                                        <h4>Tour Léman</h4>
+                                        <span>42%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress blue" style="width: 42%"></div>
+                                    </div>
+                                </div>
+                                <div class="project-progress">
+                                    <div class="project-info">
+                                        <h4>Éco-Quartier Jura</h4>
+                                        <span>20%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress orange" style="width: 20%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="view-all">
+                                <a href="#" class="view-all-link">Voir tous les projets</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="events-container">
+                        <h3>Événements à venir</h3>
+                        <div class="events-list">
+                            <div class="event-card">
+                                <div class="event-date">
+                                    <i class="fas fa-calendar-day"></i>
+                                    <p>Aujourd'hui, 14:00</p>
+                                </div>
+                                <div class="event-info">
+                                    <h4>Réunion de coordination</h4>
+                                    <p>Tour Léman - Phase 2</p>
+                                    <div class="event-participants">
+                                        <i class="fas fa-users"></i>
+                                        <span>5 participants</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="event-card">
+                                <div class="event-date">
+                                    <i class="fas fa-calendar-day"></i>
+                                    <p>Demain, 09:00</p>
+                                </div>
+                                <div class="event-info">
+                                    <h4>Visite de chantier</h4>
+                                    <p>Résidence Les Alpes</p>
+                                    <div class="event-participants">
+                                        <i class="fas fa-users"></i>
+                                        <span>3 participants</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="event-card">
+                                <div class="event-date">
+                                    <i class="fas fa-calendar-day"></i>
+                                    <p>Vendredi, 11:00</p>
+                                </div>
+                                <div class="event-info">
+                                    <h4>Signature contrat</h4>
+                                    <p>Éco-Quartier Jura - Lot B</p>
+                                    <div class="event-participants">
+                                        <i class="fas fa-users"></i>
+                                        <span>8 participants</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page Documents -->
+                <div class="content-page" id="documents">
+                    <h2 class="page-title">Documents</h2>
+                    
+                    <div class="documents-container">
+                        <div class="documents-header">
+                            <div class="search-filter">
+                                <input type="text" placeholder="Rechercher un document...">
+                                <button class="btn-primary">
+                                    <i class="fas fa-plus"></i> Nouveau document
+                                </button>
+                            </div>
+                            <div class="documents-filters">
+                                <select>
+                                    <option>Tous les projets</option>
+                                    <option>Résidence Les Alpes</option>
+                                    <option>Tour Léman</option>
+                                    <option>Éco-Quartier Jura</option>
+                                </select>
+                                <select>
+                                    <option>Tous les types</option>
+                                    <option>Plans</option>
+                                    <option>PV</option>
+                                    <option>Contrats</option>
+                                    <option>Factures</option>
+                                </select>
+                                <select>
+                                    <option>Trier par: Date (récent)</option>
+                                    <option>Trier par: Date (ancien)</option>
+                                    <option>Trier par: Nom (A-Z)</option>
+                                    <option>Trier par: Nom (Z-A)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="documents-list">
+                            <div class="document-card">
+                                <div class="document-icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <div class="document-info">
+                                    <h4>PV Réunion de chantier #12</h4>
+                                    <p>Tour Léman</p>
+                                    <div class="document-meta">
+                                        <span><i class="fas fa-calendar"></i> 09/05/2025</span>
+                                        <span><i class="fas fa-user"></i> D. Maitre</span>
+                                    </div>
+                                    <div class="document-views">
+                                        <span><i class="fas fa-eye"></i> Vu par 7 personnes</span>
+                                        <a href="#" class="view-details">Détails</a>
+                                    </div>
+                                </div>
+                                <div class="document-actions">
+                                    <button><i class="fas fa-download"></i></button>
+                                    <button><i class="fas fa-share-alt"></i></button>
+                                    <button><i class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="document-card">
+                                <div class="document-icon">
+                                    <i class="fas fa-file-image"></i>
+                                </div>
+                                <div class="document-info">
+                                    <h4>Plans d'exécution Bat. A</h4>
+                                    <p>Résidence Les Alpes</p>
+                                    <div class="document-meta">
+                                        <span><i class="fas fa-calendar"></i> 07/05/2025</span>
+                                        <span><i class="fas fa-user"></i> Architectes & Associés</span>
+                                    </div>
+                                    <div class="document-views">
+                                        <span><i class="fas fa-eye"></i> Vu par 12 personnes</span>
+                                        <a href="#" class="view-details">Détails</a>
+                                    </div>
+                                </div>
+                                <div class="document-actions">
+                                    <button><i class="fas fa-download"></i></button>
+                                    <button><i class="fas fa-share-alt"></i></button>
+                                    <button><i class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="document-card">
+                                <div class="document-icon">
+                                    <i class="fas fa-file-contract"></i>
+                                </div>
+                                <div class="document-info">
+                                    <h4>Contrat Lot Plomberie</h4>
+                                    <p>Éco-Quartier Jura</p>
+                                    <div class="document-meta">
+                                        <span><i class="fas fa-calendar"></i> 05/05/2025</span>
+                                        <span><i class="fas fa-user"></i> D. Maitre</span>
+                                    </div>
+                                    <div class="document-views">
+                                        <span><i class="fas fa-eye"></i> Vu par 3 personnes</span>
+                                        <a href="#" class="view-details">Détails</a>
+                                    </div>
+                                </div>
+                                <div class="document-actions">
+                                    <button><i class="fas fa-download"></i></button>
+                                    <button><i class="fas fa-share-alt"></i></button>
+                                    <button><i class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="document-card">
+                                <div class="document-icon">
+                                    <i class="fas fa-file-invoice"></i>
+                                </div>
+                                <div class="document-info">
+                                    <h4>Facture Terrassement</h4>
+                                    <p>Tour Léman</p>
+                                    <div class="document-meta">
+                                        <span><i class="fas fa-calendar"></i> 03/05/2025</span>
+                                        <span><i class="fas fa-user"></i> Entreprise Dupont</span>
+                                    </div>
+                                    <div class="document-views">
+                                        <span><i class="fas fa-eye"></i> Vu par 4 personnes</span>
+                                        <a href="#" class="view-details">Détails</a>
+                                    </div>
+                                </div>
+                                <div class="document-actions">
+                                    <button><i class="fas fa-download"></i></button>
+                                    <button><i class="fas fa-share-alt"></i></button>
+                                    <button><i class="fas fa-ellipsis-v"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="documents-pagination">
+                            <button class="pagination-btn active">1</button>
+                            <button class="pagination-btn">2</button>
+                            <button class="pagination-btn">3</button>
+                            <button class="pagination-btn">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="documents-activity">
+                        <h3>Activité récente</h3>
+                        <div class="activity-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <p><strong>Jean Dupont</strong> a ouvert <a href="#">PV Réunion de chantier #12</a></p>
+                                    <span class="time">il y a 35 minutes</span>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <p><strong>Sophie Martin</strong> a téléchargé <a href="#">Plans d'exécution Bat. A</a></p>
+                                    <span class="time">il y a 1 heure</span>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <p><strong>Marc Laurent</strong> a partagé <a href="#">Contrat Lot Plomberie</a> avec 3 personnes</p>
+                                    <span class="time">il y a 3 heures</span>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <p><strong>D. Maitre</strong> a ajouté <a href="#">Facture Terrassement</a></p>
+                                    <span class="time">il y a 6 heures</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page Emails -->
+                <div class="content-page" id="emails">
+                    <h2 class="page-title">Emails</h2>
+                    
+                    <div class="emails-container">
+                        <div class="emails-sidebar">
+                            <button class="btn-primary compose-btn">
+                                <i class="fas fa-pen"></i> Nouveau message
+                            </button>
+                            
+                            <ul class="email-folders">
+                                <li class="active">
+                                    <i class="fas fa-inbox"></i> Boîte de réception
+                                    <span class="badge">3</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-paper-plane"></i> Envoyés
+                                </li>
+                                <li>
+                                    <i class="fas fa-star"></i> Favoris
+                                </li>
+                                <li>
+                                    <i class="fas fa-exclamation-circle"></i> Important
+                                </li>
+                                <li>
+                                    <i class="fas fa-trash"></i> Corbeille
+                                </li>
+                            </ul>
+                            
+                            <div class="email-labels">
+                                <h4>Projets</h4>
+                                <ul>
+                                    <li>
+                                        <span class="label-color green"></span>
+                                        Résidence Les Alpes
+                                    </li>
+                                    <li>
+                                        <span class="label-color blue"></span>
+                                        Tour Léman
+                                    </li>
+                                    <li>
+                                        <span class="label-color orange"></span>
+                                        Éco-Quartier Jura
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="emails-list">
+                            <div class="emails-toolbar">
+                                <div class="toolbar-left">
+                                    <input type="checkbox">
+                                    <button><i class="fas fa-sync-alt"></i></button>
+                                    <button><i class="fas fa-archive"></i></button>
+                                    <button><i class="fas fa-trash"></i></button>
+                                </div>
+                                <div class="toolbar-right">
+                                    <input type="text" placeholder="Rechercher des emails...">
+                                    <select>
+                                        <option>Tous les emails</option>
+                                        <option>Non lus</option>
+                                        <option>Lus</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="email-items">
+                                <div class="email-item unread">
+                                    <div class="email-checkbox">
+                                        <input type="checkbox">
+                                    </div>
+                                    <div class="email-star">
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="email-sender">
+                                        <span class="label-color orange"></span>
+                                        <p>Bureau d'études MEP</p>
+                                    </div>
+                                    <div class="email-content">
+                                        <h4>Retard livraison plans techniques</h4>
+                                        <p>Suite à notre discussion d'hier, je vous confirme que les plans...</p>
+                                    </div>
+                                    <div class="email-attachment">
+                                        <i class="fas fa-paperclip"></i>
+                                    </div>
+                                    <div class="email-time">
+                                        <p>09:23</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="email-item unread">
+                                    <div class="email-checkbox">
+                                        <input type="checkbox">
+                                    </div>
+                                    <div class="email-star">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="email-sender">
+                                        <span class="label-color green"></span>
+                                        <p>Architectes & Associés</p>
+                                    </div>
+                                    <div class="email-content">
+                                        <h4>Validation modifications façade est</h4>
+                                        <p>Bonjour, Veuillez trouver ci-joint les plans modifiés pour la façade est...</p>
+                                    </div>
+                                    <div class="email-attachment">
+                                        <i class="fas fa-paperclip"></i>
+                                    </div>
+                                    <div class="email-time">
+                                        <p>Hier</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="email-item unread">
+                                    <div class="email-checkbox">
+                                        <input type="checkbox">
+                                    </div>
+                                    <div class="email-star">
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="email-sender">
+                                        <span class="label-color blue"></span>
+                                        <p>Entreprise Dupont</p>
+                                    </div>
+                                    <div class="email-content">
+                                        <h4>Devis complémentaire fondations</h4>
+                                        <p>Suite aux analyses de sol complémentaires, nous vous faisons parvenir...</p>
+                                    </div>
+                                    <div class="email-attachment">
+                                        <i class="fas fa-paperclip"></i>
+                                    </div>
+                                    <div class="email-time">
+                                        <p>Hier</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="email-item">
+                                    <div class="email-checkbox">
+                                        <input type="checkbox">
+                                    </div>
+                                    <div class="email-star">
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="email-sender">
+                                        <span class="label-color blue"></span>
+                                        <p>Service Urbanisme</p>
+                                    </div>
+                                    <div class="email-content">
+                                        <h4>Demande de complément dossier permis</h4>
+                                        <p>Suite à l'étude de votre dossier de permis de construire pour...</p>
+                                    </div>
+                                    <div class="email-attachment">
+                                        <i class="fas fa-paperclip"></i>
+                                    </div>
+                                    <div class="email-time">
+                                        <p>05/05</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="email-item">
+                                    <div class="email-checkbox">
+                                        <input type="checkbox">
+                                    </div>
+                                    <div class="email-star">
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="email-sender">
+                                        <span class="label-color orange"></span>
+                                        <p>Xavier Martin</p>
+                                    </div>
+                                    <div class="email-content">
+                                        <h4>Planning intervention lots techniques</h4>
+                                        <p>Comme convenu lors de notre réunion de chantier, voici le planning...</p>
+                                    </div>
+                                    <div class="email-attachment">
+                                        <i class="fas fa-paperclip"></i>
+                                    </div>
+                                    <div class="email-time">
+                                        <p>03/05</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="emails-pagination">
+                                <button class="pagination-btn active">1</button>
+                                <button class="pagination-btn">2</button>
+                                <button class="pagination-btn">3</button>
+                                <button class="pagination-btn">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="email-details">
+                            <div class="email-header">
+                                <h3>Retard livraison plans techniques</h3>
+                                <div class="email-actions">
+                                    <button><i class="fas fa-reply"></i></button>
+                                    <button><i class="fas fa-reply-all"></i></button>
+                                    <button><i class="fas fa-forward"></i></button>
+                                    <button><i class="fas fa-trash"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="email-metadata">
+                                <div class="sender-info">
+                                    <div class="sender-avatar">BE</div>
+                                    <div class="sender-details">
+                                        <h4>Bureau d'études MEP <span>&lt;contact@be-mep.ch&gt;</span></h4>
+                                        <p>à moi, Robert.Michel@architectes.ch, equipe@impact-pilotage.ch</p>
+                                    </div>
+                                </div>
+                                <div class="email-date">
+                                    <p>09 mai 2025, 09:23 (il y a 2 heures)</p>
+                                    <div class="tracking-info">
+                                        <i class="fas fa-eye"></i>
+                                        <span>Lu aujourd'hui à 10:15</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="email-body">
+                                <p>Bonjour Monsieur Maitre,</p>
+                                <br>
+                                <p>Suite à notre discussion d'hier, je vous confirme que les plans techniques pour le lot MEP du bâtiment C de l'Éco-Quartier Jura subiront un retard de livraison d'environ 10 jours.</p>
+                                <br>
+                                <p>Cette situation est due aux modifications substantielles demandées par le bureau d'architecture concernant l'optimisation énergétique des installations. Nous devons recalculer l'ensemble des débits et dimensions des gaines techniques.</p>
+                                <br>
+                                <p>Nous faisons notre maximum pour limiter l'impact sur le planning général, mais il est important que vous informiez les entreprises concernées de ce délai.</p>
+                                <br>
+                                <p>Vous trouverez en pièce jointe un planning révisé ainsi qu'une note explicative des modifications techniques demandées.</p>
+                                <br>
+                                <p>Cordialement,</p>
+                                <p>Marc Dubois<br>Responsable de projet<br>Bureau d'études MEP</p>
+                            </div>
+                            
+                            <div class="email-attachments">
+                                <h4>Pièces jointes (2)</h4>
+                                <div class="attachments-list">
+                                    <div class="attachment-item">
+                                        <div class="attachment-icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </div>
+                                        <div class="attachment-info">
+                                            <h5>Note_explicative_modifications_MEP.pdf</h5>
+                                            <p>245 KB</p>
+                                        </div>
+                                        <div class="attachment-actions">
+                                            <button><i class="fas fa-download"></i></button>
+                                            <button><i class="fas fa-eye"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="attachment-item">
+                                        <div class="attachment-icon">
+                                            <i class="fas fa-file-excel"></i>
+                                        </div>
+                                        <div class="attachment-info">
+                                            <h5>Planning_revise_MEP_EcoQuartier.xlsx</h5>
+                                            <p>380 KB</p>
+                                        </div>
+                                        <div class="attachment-actions">
+                                            <button><i class="fas fa-download"></i></button>
+                                            <button><i class="fas fa-eye"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="email-reply">
+                                <textarea placeholder="Répondre à ce message..."></textarea>
+                                <div class="reply-actions">
+                                    <button class="btn-primary">
+                                        <i class="fas fa-paper-plane"></i> Envoyer
+                                    </button>
+                                    <button>
+                                        <i class="fas fa-paperclip"></i>
+                                    </button>
+                                    <button>
+                                        <i class="fas fa-smile"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page Éditeur IA -->
+                <div class="content-page" id="editor">
+                    <h2 class="page-title">Éditeur IA</h2>
+                    
+                    <div class="editor-container">
+                        <div class="editor-sidebar">
+                            <h3>Modèles de documents</h3>
+                            <ul class="templates-list">
+                                <li class="active">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>PV de réunion</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-file-contract"></i>
+                                    <span>Contrat type</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-file-invoice"></i>
+                                    <span>Devis</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-file-signature"></i>
+                                    <span>Offre commerciale</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-file-excel"></i>
+                                    <span>Planning</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-file-prescription"></i>
+                                    <span>Cahier des charges</span>
+                                </li>
+                            </ul>
+                            
+                            <div class="ai-assistant">
+                                <h3>Assistant IA</h3>
+                                <div class="ai-prompt">
+                                    <textarea placeholder="Posez une question à l'IA..."></textarea>
+                                    <button>
+                                        <i class="fas fa-robot"></i> Demander à l'IA
+                                    </button>
+                                </div>
+                                <div class="ai-suggestions">
+                                    <h4>Suggestions:</h4>
+                                    <ul>
+                                        <li>Résumer les points clés de la réunion</li>
+                                        <li>Générer une liste d'actions</li>
+                                        <li>Améliorer la formulation</li>
+                                        <li>Vérifier les termes techniques</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="editor-main">
+                            <div class="editor-toolbar">
+                                <div class="toolbar-group">
+                                    <select>
+                                        <option>Arial</option>
+                                        <option>Times New Roman</option>
+                                        <option>Calibri</option>
+                                    </select>
+                                    <select>
+                                        <option>12</option>
+                                        <option>14</option>
+                                        <option>16</option>
+                                    </select>
+                                </div>
+                                <div class="toolbar-group">
+                                    <button><i class="fas fa-bold"></i></button>
+                                    <button><i class="fas fa-italic"></i></button>
+                                    <button><i class="fas fa-underline"></i></button>
+                                </div>
+                                <div class="toolbar-group">
+                                    <button><i class="fas fa-align-left"></i></button>
+                                    <button><i class="fas fa-align-center"></i></button>
+                                    <button><i class="fas fa-align-right"></i></button>
+                                </div>
+                                <div class="toolbar-group">
+                                    <button><i class="fas fa-list-ul"></i></button>
+                                    <button><i class="fas fa-list-ol"></i></button>
+                                </div>
+                                <div class="toolbar-group">
+                                    <button><i class="fas fa-link"></i></button>
+                                    <button><i class="fas fa-image"></i></button>
+                                    <button><i class="fas fa-table"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="document-title">
+                                <input type="text" value="PV Réunion de chantier - Tour Léman - 09/05/2025">
+                            </div>
+                            
+                            <div class="document-editor">
+                                <div class="editor-content" contenteditable="true">
+                                    <h2>PROCÈS-VERBAL DE RÉUNION DE CHANTIER</h2>
+                                    <p><strong>Projet:</strong> Tour Léman - Phase 2</p>
+                                    <p><strong>Date:</strong> 09/05/2025</p>
+                                    <p><strong>Heure:</strong> 14:00 - 16:00</p>
+                                    <p><strong>Lieu:</strong> Salle de réunion du chantier</p>
+                                    <p><strong>Rédacteur:</strong> Daniel Maitre</p>
+                                    <br>
+                                    <h3>Participants:</h3>
+                                    <ul>
+                                        <li>Daniel Maitre - Impact Pilotage (Pilote)</li>
+                                        <li>Sophie Durand - Architectes & Associés</li>
+                                        <li>Jean Martin - Entreprise Dupont (Gros œuvre)</li>
+                                        <li>Marc Dubois - Bureau d'études MEP</li>
+                                        <li>Antoine Lefèvre - Impact Immobilier</li>
+                                    </ul>
+                                    <br>
+                                    <h3>Ordre du jour:</h3>
+                                    <ol>
+                                        <li>Suivi de l'avancement des travaux</li>
+                                        <li>Points techniques</li>
+                                        <li>Planning</li>
+                                        <li>Sécurité</li>
+                                        <li>Divers</li>
+                                    </ol>
+                                    <br>
+                                    <h3>1. Suivi de l'avancement des travaux</h3>
+                                    <p>Le gros œuvre du niveau R+3 est achevé à 80%. Les murs porteurs sont en place, et le coulage de la dalle interviendra dans les 3 jours à venir.</p>
+                                    <p>L'entreprise de charpente interviendra dès le 15/05 pour la mise en place des structures métalliques de support.</p>
+                                    <br>
+                                    <h3>2. Points techniques</h3>
+                                    <p>Le bureau d'études MEP a signalé un retard dans la livraison des plans techniques suite aux modifications demandées par les architectes. Un délai supplémentaire de 10 jours est requis.</p>
+                                    <p>Les réservations pour les gaines techniques devront être adaptées en conséquence. L'impact sur le planning est en cours d'évaluation.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="document-actions">
+                                <button class="btn-primary">
+                                    <i class="fas fa-save"></i> Enregistrer
+                                </button>
+                                <button>
+                                    <i class="fas fa-download"></i> Exporter en PDF
+                                </button>
+                                <button>
+                                    <i class="fas fa-share-alt"></i> Partager
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="editor-sidebar right">
+                            <div class="document-history">
+                                <h3>Historique</h3>
+                                <div class="history-list">
+                                    <div class="history-item">
+                                        <p>09/05/2025 - 11:30</p>
+                                        <p>Dernière modification par Daniel Maitre</p>
+                                    </div>
+                                    <div class="history-item">
+                                        <p>09/05/2025 - 10:45</p>
+                                        <p>Création du document</p>
+                                    </div>
+                                </div>
+                                <button>
+                                    <i class="fas fa-history"></i> Voir les versions
+                                </button>
+                            </div>
+                            
+                            <div class="ai-feedback">
+                                <h3>Suggestions IA</h3>
+                                <div class="suggestion-item">
+                                    <div class="suggestion-header">
+                                        <i class="fas fa-lightbulb"></i>
+                                        <h4>Amélioration de formulation</h4>
+                                    </div>
+                                    <p>La phrase "Les réservations pour les gaines techniques devront être adaptées" pourrait être reformulée pour plus de clarté.</p>
+                                    <button>Appliquer</button>
+                                </div>
+                                <div class="suggestion-item">
+                                    <div class="suggestion-header">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <h4>Information manquante</h4>
+                                    </div>
+                                    <p>Ajoutez la liste des actions à réaliser avec les responsables et les délais.</p>
+                                    <button>Générer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page Tâches -->
+                <div class="content-page" id="tasks">
+                    <h2 class="page-title">Tâches</h2>
+                    
+                    <div class="tasks-container">
+                        <div class="tasks-header">
+                            <div class="search-filter">
+                                <input type="text" placeholder="Rechercher une tâche...">
+                                <button class="btn-primary">
+                                    <i class="fas fa-plus"></i> Nouvelle tâche
+                                </button>
+                            </div>
+                            <div class="tasks-filters">
+                                <select>
+                                    <option>Tous les projets</option>
+                                    <option>Résidence Les Alpes</option>
+                                    <option>Tour Léman</option>
+                                    <option>Éco-Quartier Jura</option>
+                                </select>
+                                <select>
+                                    <option>Tous les responsables</option>
+                                    <option>Daniel Maitre</option>
+                                    <option>Sophie Martin</option>
+                                    <option>Non assigné</option>
+                                </select>
+                                <select>
+                                    <option>Tous les statuts</option>
+                                    <option>À faire</option>
+                                    <option>En cours</option>
+                                    <option>En attente</option>
+                                    <option>Terminé</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="tasks-board">
+                            <div class="tasks-column">
+                                <div class="column-header">
+                                    <h3>À faire</h3>
+                                    <span class="count">5</span>
+                                </div>
+                                
+                                <div class="task-card">
+                                    <div class="task-header">
+                                        <span class="task-project green">Résidence Les Alpes</span>
+                                        <div class="task-actions">
+                                            <button><i class="fas fa-ellipsis-v"></i></button>
+                                        </div>
+                                    </div>
+                                    <h4>Finaliser dossier permis modificatif</h4>
+                                    <p>Compiler tous les documents techniques et administratifs pour le dépôt du permis modificatif.</p>
+                                    <div class="task-meta">
+                                        <div class="task-assignee">
+                                            <span class="user-avatar small">DM</span>
+                                        </div>
+                                        <div class="task-date">
+                                            <i class="fas fa-calendar"></i>
+                                            <span>15/05/2025</span>
+                                        </div>
+                                        <div class="task-attachments">
+                                            <i class="fas fa-paperclip"></i>
+                                            <span>2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="task-card">
+                                    <div class="task-header">
+                                        <span class="task-project blue">Tour Léman</span>
+                                        <div class="task-actions">
+                                            <button><i class="fas fa-ellipsis-v"></i></button>
+                                        </div>
+                                    </div>
+                                    <h4>Valider devis électricité</h4>
+                                    <p>Analyser et comparer les devis reçus pour les travaux d'électricité.</p>
+                                    <div class="task-meta">
+                                        <div class="task-assignee">
+                                            <span class="user-avatar small">SM</span>
+                                        </div>
+                                        <div class="task-date">
+                                            <i class="fas fa-calendar"></i>
+                                            <span>12/05/2025</span>
+                                        </div>
+                                        <div class="task-attachments">
+                                            <i class="fas fa-paperclip"></i>
+                                            <span>3</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tasks-column">
+                                <div class="column-header">
+                                    <h3>En cours</h3>
+                                    <span class="count">3</span>
+                                </div>
+                                
+                                <div class="task-card">
+                                    <div class="task-header">
+                                        <span class="task-project blue">Tour Léman</span>
+                                        <div class="task-actions">
+                                            <button><i class="fas fa-ellipsis-v"></i></button>
+                                        </div>
+                                    </div>
+                                    <h4>Suivi des travaux de terrassement</h4>
+                                    <p>Contrôler l'avancement des travaux de terrassement et la qualité d'exécution.</p>
+                                    <div class="task-media">
+                                        <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Travaux de terrassement">
+                                    </div>
+                                    <div class="task-meta">
+                                        <div class="task-assignee">
+                                            <span class="user-avatar small">DM</span>
+                                        </div>
+                                        <div class="task-date">
+                                            <i class="fas fa-calendar"></i>
+                                            <span>En cours</span>
+                                        </div>
+                                        <div class="task-attachments">
+                                            <i class="fas fa-paperclip"></i>
+                                            <span>5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="task-card">
+                                    <div class="task-header">
+                                        <span class="task-project orange">Éco-Quartier Jura</span>
+                                        <div class="task-actions">
+                                            <button><i class="fas fa-ellipsis-v"></i></button>
+                                        </div>
+                                    </div>
+                                    <h4>Coordination des lots techniques</h4>
+                                    <p>Organiser les réunions de synthèse pour la coordination des lots techniques.</p>
+                                    <div class="task-meta">
+                                        <div class="task-assignee">
+                                            <span class="user-avatar small">DM</span>
+                                        </div>
+                                        <div class="task-date">
+                                            <i class="fas fa-calendar"></i>
+                                            <span>Continu</span>
+                                        </div>
+                                        <div class="task-attachments">
+                                            <i class="fas fa-paperclip"></i>
+                                            <span>1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tasks-column">
+                                <div class="column-header">
+                                    <h3>En attente</h3>
+                                    <span class="count">2</span>
+                                </div>
+                                
+                                <div class="task-card">
+                                    <div class="task-header">
+                                        <span class="task-project green">Résidence Les Alpes</span>
+                                        <div class="task-actions">
+                                            <button><i class="fas fa-ellipsis-v"></i></button>
+                                        </div>
+                                    </div>
+                                    <h4>Validation plans façades</h4>
+                                    <p>En attente de retour du client sur les propositions de façades.</p>
+                                    <div class="task-meta">
+                                        <div class="task-assignee">
+                                            <span class="user-avatar small">SM</span>
+                                        </div>
+                                        <div class="task-date">
+                                            <i class="fas fa-calendar"></i>
+                                            <span>11/05/2025</span>
+                                        </div>
+                                        <div class="task-attachments">
+                                            <i class="fas fa-paperclip"></i>
+                                            <span>2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tasks-column">
+                                <div class="column-header">
+                                    <h3>Terminé</h3>
+                                    <span class="count">4</span>
+                                </div>
+                                
+                                <div class="task-card">
+                                    <div class="task-header">
+                                        <span class="task-project orange">Éco-Quartier Jura</span>
+                                        <div class="task-actions">
+                                            <button><i class="fas fa-ellipsis-v"></i></button>
+                                        </div>
+                                    </div>
+                                    <h4>Préparation dossier consultation entreprises</h4>
+                                    <p>Finaliser et diffuser le DCE pour les lots techniques.</p>
+                                    <div class="task-meta">
+                                        <div class="task-assignee">
+                                            <span class="user-avatar small">DM</span>
+                                        </div>
+                                        <div class="task-date">
+                                            <i class="fas fa-calendar"></i>
+                                            <span>05/05/2025</span>
+                                        </div>
+                                        <div class="task-attachments">
+                                            <i class="fas fa-paperclip"></i>
+                                            <span>7</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="task-card">
+                                    <div class="task-header">
+                                        <span class="task-project blue">Tour Léman</span>
+                                        <div class="task-actions">
+                                            <button><i class="fas fa-ellipsis-v"></i></button>
+                                        </div>
+                                    </div>
+                                    <h4>Réunion de coordination sécurité</h4>
+                                    <p>Organiser et animer la réunion de coordination sécurité avec toutes les entreprises.</p>
+                                    <div class="task-meta">
+                                        <div class="task-assignee">
+                                            <span class="user-avatar small">DM</span>
+                                        </div>
+                                        <div class="task-date">
+                                            <i class="fas fa-calendar"></i>
+                                            <span>02/05/2025</span>
+                                        </div>
+                                        <div class="task-attachments">
+                                            <i class="fas fa-paperclip"></i>
+                                            <span>1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page Calendrier -->
+                <div class="content-page" id="calendar">
+                    <h2 class="page-title">Calendrier</h2>
+                    
+                    <div class="calendar-container">
+                        <div class="calendar-sidebar">
+                            <div class="date-navigation">
+                                <button class="btn-primary">
+                                    <i class="fas fa-plus"></i> Nouvel événement
+                                </button>
+                                <div class="month-selector">
+                                    <button><i class="fas fa-chevron-left"></i></button>
+                                    <h3>Mai 2025</h3>
+                                    <button><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                                <div class="mini-calendar">
+                                    <!-- Mini calendrier simplifié -->
+                                    <div class="calendar-grid">
+                                        <div class="calendar-day-header">L</div>
+                                        <div class="calendar-day-header">M</div>
+                                        <div class="calendar-day-header">M</div>
+                                        <div class="calendar-day-header">J</div>
+                                        <div class="calendar-day-header">V</div>
+                                        <div class="calendar-day-header">S</div>
+                                        <div class="calendar-day-header">D</div>
+                                        
+                                        <div class="calendar-day disabled">29</div>
+                                        <div class="calendar-day disabled">30</div>
+                                        <div class="calendar-day">1</div>
+                                        <div class="calendar-day">2</div>
+                                        <div class="calendar-day">3</div>
+                                        <div class="calendar-day">4</div>
+                                        <div class="calendar-day">5</div>
+                                        
+                                        <div class="calendar-day">6</div>
+                                        <div class="calendar-day">7</div>
+                                        <div class="calendar-day">8</div>
+                                        <div class="calendar-day active">9</div>
+                                        <div class="calendar-day">10</div>
+                                        <div class="calendar-day">11</div>
+                                        <div class="calendar-day">12</div>
+                                        
+                                        <div class="calendar-day">13</div>
+                                        <div class="calendar-day">14</div>
+                                        <div class="calendar-day">15</div>
+                                        <div class="calendar-day">16</div>
+                                        <div class="calendar-day">17</div>
+                                        <div class="calendar-day">18</div>
+                                        <div class="calendar-day">19</div>
+                                        
+                                        <div class="calendar-day">20</div>
+                                        <div class="calendar-day">21</div>
+                                        <div class="calendar-day">22</div>
+                                        <div class="calendar-day">23</div>
+                                        <div class="calendar-day">24</div>
+                                        <div class="calendar-day">25</div>
+                                        <div class="calendar-day">26</div>
+                                        
+                                        <div class="calendar-day">27</div>
+                                        <div class="calendar-day">28</div>
+                                        <div class="calendar-day">29</div>
+                                        <div class="calendar-day">30</div>
+                                        <div class="calendar-day">31</div>
+                                        <div class="calendar-day disabled">1</div>
+                                        <div class="calendar-day disabled">2</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="calendar-filters">
+                                <h3>Afficher</h3>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" checked>
+                                    <span class="checkbox-label">
+                                        <span class="color-dot green"></span>
+                                        Résidence Les Alpes
+                                    </span>
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" checked>
+                                    <span class="checkbox-label">
+                                        <span class="color-dot blue"></span>
+                                        Tour Léman
+                                    </span>
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" checked>
+                                    <span class="checkbox-label">
+                                        <span class="color-dot orange"></span>
+                                        Éco-Quartier Jura
+                                    </span>
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" checked>
+                                    <span class="checkbox-label">
+                                        <span class="color-dot purple"></span>
+                                        Général
+                                    </span>
+                                </label>
+                            </div>
+                            
+                            <div class="team-calendar">
+                                <h3>Équipe</h3>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" checked>
+                                    <span class="checkbox-label">
+                                        <span class="user-avatar small">DM</span>
+                                        Daniel Maitre
+                                    </span>
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" checked>
+                                    <span class="checkbox-label">
+                                        <span class="user-avatar small">SM</span>
+                                        Sophie Martin
+                                    </span>
+                                </label>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" checked>
+                                    <span class="checkbox-label">
+                                        <span class="user-avatar small">AL</span>
+                                        Anne Leroy
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="calendar-main">
+                            <div class="calendar-view-options">
+                                <div class="view-buttons">
+                                    <button>Jour</button>
+                                    <button class="active">Semaine</button>
+                                    <button>Mois</button>
+                                </div>
+                                <button class="today-button">Aujourd'hui</button>
+                            </div>
+                            
+                            <div class="weekly-calendar">
+                                <div class="week-header">
+                                    <div class="time-column"></div>
+                                    <div class="day-column">
+                                        <div class="day-name">Lundi</div>
+                                        <div class="day-number">06</div>
+                                    </div>
+                                    <div class="day-column">
+                                        <div class="day-name">Mardi</div>
+                                        <div class="day-number">07</div>
+                                    </div>
+                                    <div class="day-column">
+                                        <div class="day-name">Mercredi</div>
+                                        <div class="day-number">08</div>
+                                    </div>
+                                    <div class="day-column active">
+                                        <div class="day-name">Jeudi</div>
+                                        <div class="day-number">09</div>
+                                    </div>
+                                    <div class="day-column">
+                                        <div class="day-name">Vendredi</div>
+                                        <div class="day-number">10</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="week-grid">
+                                    <div class="time-column">
+                                        <div class="time-slot">8:00</div>
+                                        <div class="time-slot">9:00</div>
+										<div class="time-slot">10:00</div>
+                                        <div class="time-slot">11:00</div>
+                                        <div class="time-slot">12:00</div>
+                                        <div class="time-slot">13:00</div>
+                                        <div class="time-slot">14:00</div>
+                                        <div class="time-slot">15:00</div>
+                                        <div class="time-slot">16:00</div>
+                                        <div class="time-slot">17:00</div>
+                                        <div class="time-slot">18:00</div>
+                                    </div>
+                                    
+                                    <div class="day-grid">
+                                        <!-- Lundi -->
+                                        <div class="day-events">
+                                            <div class="event green" style="top: 60px; height: 90px;">
+                                                <div class="event-time">09:00 - 10:30</div>
+                                                <div class="event-title">Réunion Client</div>
+                                                <div class="event-location">Résidence Les Alpes</div>
+                                            </div>
+                                            <div class="event orange" style="top: 240px; height: 60px;">
+                                                <div class="event-time">13:00 - 14:00</div>
+                                                <div class="event-title">Appel fournisseurs</div>
+                                                <div class="event-location">Bureau</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Mardi -->
+                                        <div class="day-events">
+                                            <div class="event orange" style="top: 180px; height: 120px;">
+                                                <div class="event-time">11:00 - 13:00</div>
+                                                <div class="event-title">Visite chantier</div>
+                                                <div class="event-location">Éco-Quartier Jura</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Mercredi -->
+                                        <div class="day-events">
+                                            <div class="event blue" style="top: 0px; height: 60px;">
+                                                <div class="event-time">08:00 - 09:00</div>
+                                                <div class="event-title">Préparation réunion</div>
+                                                <div class="event-location">Bureau</div>
+                                            </div>
+                                            <div class="event purple" style="top: 360px; height: 120px;">
+                                                <div class="event-time">15:00 - 17:00</div>
+                                                <div class="event-title">Formation logiciel</div>
+                                                <div class="event-location">Salle formation</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Jeudi (Aujourd'hui) -->
+                                        <div class="day-events">
+                                            <div class="event green" style="top: 120px; height: 60px;">
+                                                <div class="event-time">10:00 - 11:00</div>
+                                                <div class="event-title">Point administratif</div>
+                                                <div class="event-location">Bureau</div>
+                                            </div>
+                                            <div class="event blue" style="top: 360px; height: 120px;">
+                                                <div class="event-time">14:00 - 16:00</div>
+                                                <div class="event-title">Réunion de coordination</div>
+                                                <div class="event-location">Tour Léman</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Vendredi -->
+                                        <div class="day-events">
+                                            <div class="event blue" style="top: 180px; height: 60px;">
+                                                <div class="event-time">11:00 - 12:00</div>
+                                                <div class="event-title">Point technique</div>
+                                                <div class="event-location">Tour Léman</div>
+                                            </div>
+                                            <div class="event orange" style="top: 300px; height: 90px;">
+                                                <div class="event-time">13:30 - 15:00</div>
+                                                <div class="event-title">Réunion bureaux d'études</div>
+                                                <div class="event-location">Éco-Quartier Jura</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="event-details-panel">
+                            <div class="panel-header">
+                                <h3>Détails de l'événement</h3>
+                                <button class="close-btn"><i class="fas fa-times"></i></button>
+                            </div>
+                            
+                            <div class="event-details">
+                                <div class="event-title">Réunion de coordination</div>
+                                <div class="event-time">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Jeudi 9 mai 2025, 14:00 - 16:00</span>
+                                </div>
+                                <div class="event-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Tour Léman - Salle de réunion chantier</span>
+                                </div>
+                                <div class="event-organizer">
+                                    <i class="fas fa-user"></i>
+                                    <span>Organisateur: Daniel Maitre</span>
+                                </div>
+                                <div class="event-participants">
+                                    <i class="fas fa-users"></i>
+                                    <span>Participants (5):</span>
+                                    <ul>
+                                        <li>Daniel Maitre</li>
+                                        <li>Sophie Durand (Architecte)</li>
+                                        <li>Jean Martin (Gros œuvre)</li>
+                                        <li>Marc Dubois (Bureau d'études)</li>
+                                        <li>Antoine Lefèvre (Impact Immobilier)</li>
+                                    </ul>
+                                </div>
+                                <div class="event-description">
+                                    <h4>Description:</h4>
+                                    <p>Point d'avancement sur les travaux de la phase 2. Coordination des différents lots techniques et validation des modifications demandées par le bureau d'études.</p>
+                                </div>
+                                <div class="event-documents">
+                                    <h4>Documents liés:</h4>
+                                    <ul>
+                                        <li><i class="fas fa-file-pdf"></i> Planning_Phase2_TourLeman.pdf</li>
+                                        <li><i class="fas fa-file-excel"></i> Suivi_budget_TourLeman.xlsx</li>
+                                    </ul>
+                                </div>
+                                <div class="event-actions">
+                                    <button class="btn-primary">
+                                        <i class="fas fa-edit"></i> Modifier
+                                    </button>
+                                    <button>
+                                        <i class="fas fa-trash"></i> Supprimer
+                                    </button>
+                                    <button>
+                                        <i class="fas fa-share-alt"></i> Partager
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page Analyses -->
+                <div class="content-page" id="analytics">
+                    <h2 class="page-title">Analyses</h2>
+                    
+                    <div class="analytics-container">
+                        <div class="analytics-filters">
+                            <select>
+                                <option>Tous les projets</option>
+                                <option>Résidence Les Alpes</option>
+                                <option>Tour Léman</option>
+                                <option>Éco-Quartier Jura</option>
+                            </select>
+                            <select>
+                                <option>2025 (Année en cours)</option>
+                                <option>2024</option>
+                                <option>2023</option>
+                            </select>
+                            <button class="btn-primary">
+                                <i class="fas fa-file-export"></i> Exporter
+                            </button>
+                        </div>
+                        
+                        <div class="analytics-grid">
+                            <div class="analytics-card wide">
+                                <h3>Progression des projets</h3>
+                                <div class="chart-container">
+                                    <div class="chart-placeholder">
+                                        <div class="chart-bars">
+                                            <div class="chart-bar-group">
+                                                <div class="chart-label">Jan</div>
+                                                <div class="chart-bar" style="height: 30%"></div>
+                                                <div class="chart-bar" style="height: 45%"></div>
+                                                <div class="chart-bar" style="height: 20%"></div>
+                                            </div>
+                                            <div class="chart-bar-group">
+                                                <div class="chart-label">Fév</div>
+                                                <div class="chart-bar" style="height: 35%"></div>
+                                                <div class="chart-bar" style="height: 50%"></div>
+                                                <div class="chart-bar" style="height: 25%"></div>
+                                            </div>
+                                            <div class="chart-bar-group">
+                                                <div class="chart-label">Mar</div>
+                                                <div class="chart-bar" style="height: 40%"></div>
+                                                <div class="chart-bar" style="height: 55%"></div>
+                                                <div class="chart-bar" style="height: 30%"></div>
+                                            </div>
+                                            <div class="chart-bar-group">
+                                                <div class="chart-label">Avr</div>
+                                                <div class="chart-bar" style="height: 50%"></div>
+                                                <div class="chart-bar" style="height: 60%"></div>
+                                                <div class="chart-bar" style="height: 35%"></div>
+                                            </div>
+                                            <div class="chart-bar-group">
+                                                <div class="chart-label">Mai</div>
+                                                <div class="chart-bar" style="height: 65%"></div>
+                                                <div class="chart-bar" style="height: 42%"></div>
+                                                <div class="chart-bar" style="height: 20%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chart-legend">
+                                    <div class="legend-item">
+                                        <span class="color-dot green"></span>
+                                        <span>Résidence Les Alpes</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="color-dot blue"></span>
+                                        <span>Tour Léman</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="color-dot orange"></span>
+                                        <span>Éco-Quartier Jura</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="analytics-card">
+                                <h3>Répartition du budget</h3>
+                                <div class="chart-container">
+                                    <div class="chart-placeholder">
+                                        <div class="pie-chart">
+                                            <div class="pie-segment" style="--percentage: 35%; --color: #4CAF50;"></div>
+                                            <div class="pie-segment" style="--percentage: 40%; --color: #2196F3;"></div>
+                                            <div class="pie-segment" style="--percentage: 25%; --color: #FF9800;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chart-legend">
+                                    <div class="legend-item">
+                                        <span class="color-dot green"></span>
+                                        <span>Résidence Les Alpes (35%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="color-dot blue"></span>
+                                        <span>Tour Léman (40%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="color-dot orange"></span>
+                                        <span>Éco-Quartier Jura (25%)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="analytics-card">
+                                <h3>Statut des tâches</h3>
+                                <div class="chart-container">
+                                    <div class="chart-placeholder">
+                                        <div class="donut-chart">
+                                            <div class="donut-segment" style="--percentage: 30%; --color: #e74c3c;"></div>
+                                            <div class="donut-segment" style="--percentage: 25%; --color: #3498db;"></div>
+                                            <div class="donut-segment" style="--percentage: 15%; --color: #f39c12;"></div>
+                                            <div class="donut-segment" style="--percentage: 30%; --color: #2ecc71;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chart-legend">
+                                    <div class="legend-item">
+                                        <span class="color-dot" style="background-color: #e74c3c;"></span>
+                                        <span>À faire (30%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="color-dot" style="background-color: #3498db;"></span>
+                                        <span>En cours (25%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="color-dot" style="background-color: #f39c12;"></span>
+                                        <span>En attente (15%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="color-dot" style="background-color: #2ecc71;"></span>
+                                        <span>Terminé (30%)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="analytics-card wide">
+                                <h3>Suivi financier</h3>
+                                <div class="chart-container">
+                                    <div class="chart-placeholder">
+                                        <div class="line-chart">
+                                            <div class="chart-grid"></div>
+                                            <div class="chart-line budget"></div>
+                                            <div class="chart-line actual"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chart-legend">
+                                    <div class="legend-item">
+                                        <span class="color-dot" style="background-color: #3498db;"></span>
+                                        <span>Budget prévisionnel</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="color-dot" style="background-color: #e74c3c;"></span>
+                                        <span>Dépenses réelles</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="analytics-card">
+                                <h3>Documents par type</h3>
+                                <div class="chart-container">
+                                    <div class="chart-placeholder">
+                                        <div class="horizontal-bars">
+                                            <div class="h-bar-group">
+                                                <div class="h-bar-label">Plans</div>
+                                                <div class="h-bar" style="width: 75%"></div>
+                                                <div class="h-bar-value">38</div>
+                                            </div>
+                                            <div class="h-bar-group">
+                                                <div class="h-bar-label">PV</div>
+                                                <div class="h-bar" style="width: 50%"></div>
+                                                <div class="h-bar-value">25</div>
+                                            </div>
+                                            <div class="h-bar-group">
+                                                <div class="h-bar-label">Contrats</div>
+                                                <div class="h-bar" style="width: 30%"></div>
+                                                <div class="h-bar-value">15</div>
+                                            </div>
+                                            <div class="h-bar-group">
+                                                <div class="h-bar-label">Factures</div>
+                                                <div class="h-bar" style="width: 60%"></div>
+                                                <div class="h-bar-value">32</div>
+                                            </div>
+                                            <div class="h-bar-group">
+                                                <div class="h-bar-label">Autres</div>
+                                                <div class="h-bar" style="width: 40%"></div>
+                                                <div class="h-bar-value">20</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="analytics-card">
+                                <h3>Performance par responsable</h3>
+                                <table class="analytics-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Responsable</th>
+                                            <th>Tâches</th>
+                                            <th>Terminées</th>
+                                            <th>En retard</th>
+                                            <th>Performance</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Daniel Maitre</td>
+                                            <td>42</td>
+                                            <td>35</td>
+                                            <td>2</td>
+                                            <td>
+                                                <div class="progress-bar small">
+                                                    <div class="progress green" style="width: 90%"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sophie Martin</td>
+                                            <td>38</td>
+                                            <td>30</td>
+                                            <td>3</td>
+                                            <td>
+                                                <div class="progress-bar small">
+                                                    <div class="progress green" style="width: 85%"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Anne Leroy</td>
+                                            <td>25</td>
+                                            <td>20</td>
+                                            <td>1</td>
+                                            <td>
+                                                <div class="progress-bar small">
+                                                    <div class="progress green" style="width: 88%"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
